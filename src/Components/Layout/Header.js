@@ -1,16 +1,16 @@
 import React from "react";
-import classes from  "./Header.module.css";
-import foodImage from "../../Assests/Chinese food img.jpg";
-
+import classes from "./Header.module.css";
+import foodImage from "../../Assests/meals.jpg";
+import HeaderCartButton from "./HeaderCartButton";
 const Header = () => {
   return (
     <>
       <header className={classes.header}>
         <h1>XOXO Meals</h1>
-        <button>Cart</button>
+        <HeaderCartButton>Cart</HeaderCartButton>
       </header>
-      <div className={classes['main-image']}>
-        <img src={foodImage} alt="Chinese food"/>
+      <div className={classes["main-image"]}>
+        <img src={foodImage} alt="Chinese food" />
       </div>
     </>
   );
