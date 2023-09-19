@@ -31,7 +31,7 @@ const dummy_meals = [
 
 const AvailableMeals = () => {
   const mealsList = dummy_meals.map((meal) => (
-    <li className={classes.meal}>
+    <li className={classes.meal} key={meal.id}>
       <div>
         <h3>{meal.name}</h3>
         <div className={classes.description}>{meal.description}</div>
