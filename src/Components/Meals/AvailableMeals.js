@@ -42,7 +42,7 @@ const AvailableMeals = () => {
       <div className={classes.form}>
         <div>
           <label>Amount: </label>
-          <input type="text"></input>
+          <input type="number" min='1' max='5' step='1' defaultValue='1'></input>
         </div>
         <div className={classes.form_button}>
           <button>+ Add</button>
