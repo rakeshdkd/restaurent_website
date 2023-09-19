@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./AvailableMeals.module.css";
 import Cards from "../UI/Cards";
 
-
 const dummy_meals = [
   {
     id: "m1",
@@ -37,6 +36,17 @@ const AvailableMeals = () => {
         <h3>{meal.name}</h3>
         <div className={classes.description}>{meal.description}</div>
         <div className={classes.price}>${meal.price}</div>
+      </div>
+
+      {/* Form div  */}
+      <div className={classes.form}>
+        <div>
+          <label>Amount: </label>
+          <input type="text"></input>
+        </div>
+        <div className={classes.form_button}>
+          <button>+ Add</button>
+        </div>
       </div>
     </li>
   ));

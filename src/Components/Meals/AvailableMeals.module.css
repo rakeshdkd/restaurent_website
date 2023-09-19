@@ -34,6 +34,32 @@
   font-size: 1.25rem;
 }
 
+.form{
+  display: inline-block;
+  align-items: center;
+}
+.form label{
+  font-weight:500;
+}
+.form input{
+width: 30px;
+border-radius: 5px;
+border: 0.5px solid black;
+}
+.form_button{
+  display: flex;
+  float: right;
+  margin-top: 10px;
+}
+.form_button button {
+  background-color: #8a2b06;
+  text-align: center;
+  color: white;
+  border-radius: 18px;
+  border: none;
+  padding: 5px 30px;
+}
+
 @keyframes meals-appear {
   from {
     opacity: 0;
