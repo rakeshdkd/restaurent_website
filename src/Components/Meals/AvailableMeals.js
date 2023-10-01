@@ -1,8 +1,8 @@
-import React from "react";
+import Card from "../UI/Cards";
+import MealItem from "./MealItem/MealItem";
 import classes from "./AvailableMeals.module.css";
-import Cards from "../UI/Cards";
 
-const dummy_meals = [
+const DUMMY_MEALS = [
   {
     id: "m1",
     name: "Sushi",
@@ -30,34 +30,22 @@ const dummy_meals = [
 ];
 
 const AvailableMeals = () => {
-  const mealsList = dummy_meals.map((meal) => (
-    <li className={classes.meal} key={meal.id}>
-      <div>
-        <h3>{meal.name}</h3>
-        <div className={classes.description}>{meal.description}</div>
-        <div className={classes.price}>${meal.price}</div>
-      </div>
-
-      {/* Form div  */}
-      <div className={classes.form}>
-        <div>
-          <label>Amount: </label>
-          <input type="number" min='1' max='5' step='1' defaultValue='1'></input>
-        </div>
-        <div className={classes.form_button}>
-          <button>+ Add</button>
-        </div>
-      </div>
-    </li>
+  const mealsList = DUMMY_MEALS.map((meal) => (
+    <MealItem
+      id={meal.id}
+      key={meal.id}
+      name={meal.name}
+      description={meal.description}
+      price={meal.price}
+    />
   ));
+
   return (
-    <>
-      <section className={classes.meals}>
-        <Cards>
-          <ul>{mealsList}</ul>
-        </Cards>
-      </section>
-    </>
+    <section className={classes.meals}>
+      <Card>
+        <ul>{mealsList}</ul>
+      </Card>
+    </section>
   );
 };
 
